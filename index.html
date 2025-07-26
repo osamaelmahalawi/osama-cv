@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>أسامة لبيب المحلاوي - مُدرِّس العلوم والكيمياء | osama-profile</title>
+  <!-- تحميل خط عربي كلاسيكي (Amiri) -->
+  <link href="https://fonts.googleapis.com/css2?family=Amiri&display=swap" rel="stylesheet">
+  <style>
+    /* تعيين الخط الكلاسيكي */
+    body, h1, h2, p, .info, .contact {
+      font-family: 'Amiri', serif;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background: #0a1f3c; /* خلفية زرقاء داكنة */
+      color: #e0f7ff; /* نص فاتح */
+      line-height: 1.8;
+      overflow-x: hidden;
+    }
+
+    /* خلفية متحركة داكنة */
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, #0a1f3c, #1a5fb4, #0d3b66);
+      background-size: 400% 400%;
+      z-index: -1;
+      opacity: 0.7;
+      animation: gradientShift 18s ease infinite;
+    }
+
+    @keyframes gradientShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 30px auto;
+      padding: 30px;
+      background: rgba(13, 35, 67, 0.7); /* أزرق داكن شفاف */
+      backdrop-filter: blur(10px);
+      border-radius: 16px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+      border: 1px solid #1a5fb4;
+      animation: fadeInUp 1s ease-out;
+    }
+
+    h1 {
+      text-align: center;
+      color: #4fc3f7; /* أزرق فاتح مشرق */
+      font-size: 2.6em;
+      margin-bottom: 15px;
+      font-weight: normal;
+      text-shadow: 0 0 10px rgba(79, 195, 247, 0.5);
+    }
+
+    h2 {
+      color: #81d4fa;
+      border-bottom: 2px solid #4fc3f7;
+      padding-bottom: 6px;
+      margin-top: 30px;
+      font-weight: normal;
+      animation: slideInRight 1s ease-out;
+    }
+
+    p {
+      text-align: justify;
+      font-size: 1.15em;
+      animation: fadeIn 1.2s ease-out;
+    }
+
+    /* الصورة الشخصية */
+    .profile-img {
+      display: block;
+      margin: 25px auto;
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid #4fc3f7;
+      box-shadow: 0 6px 16px rgba(79, 195, 247, 0.4);
+      animation: glow 2s infinite alternate;
+    }
+
+    @keyframes glow {
+      0% { box-shadow: 0 6px 16px rgba(79, 195, 247, 0.4); }
+      100% { box-shadow: 0 8px 24px rgba(79, 195, 247, 0.7); transform: scale(1.03); }
+    }
+
+    /* معلومات السيرة الذاتية */
+    .info {
+      background: rgba(16, 50, 98, 0.6);
+      padding: 18px;
+      border-radius: 12px;
+      margin: 20px 0;
+      font-size: 1.1em;
+      border-left: 4px solid #4fc3f7;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      animation: fadeIn 1.4s ease-out;
+    }
+
+    /* الاقتباس */
+    .quote {
+      font-style: italic;
+      color: #a1e8ff;
+      text-align: center;
+      padding: 20px;
+      background: rgba(13, 60, 100, 0.5);
+      border-radius: 10px;
+      margin: 25px 0;
+      font-size: 1.15em;
+      border: 1px dashed #4fc3f7;
+      animation: fadeIn 1.6s ease-out;
+    }
+
+    /* معلومات الاتصال */
+    .contact {
+      margin-top: 30px;
+      text-align: center;
+      font-size: 1.1em;
+      color: #81d4fa;
+      animation: fadeIn 1.8s ease-out;
+    }
+
+    .contact a {
+      color: #4fc3f7;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .contact a:hover {
+      color: #81d4fa;
+      text-decoration: underline;
+    }
+
+    /* الفوتر */
+    .footer {
+      text-align: center;
+      margin-top: 40px;
+      color: #64b5f6;
+      font-size: 0.9em;
+      animation: fadeIn 2s ease-out;
+    }
+
+    .footer a {
+      color: #4fc3f7;
+      text-decoration: none;
+    }
+
+    .footer a:hover {
+      text-decoration: underline;
+    }
+
+    /* الأنيميشن */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes slideInRight {
+      from { opacity: 0; transform: translateX(20px); }
+      to { opacity: 1; transform: translateX(0); }
+    }
+
+    /* تصميم استجاقي (متجاوب مع الهواتف) */
+    @media (max-width: 768px) {
+      .container {
+        margin: 20px;
+        padding: 20px;
+      }
+      h1 {
+        font-size: 2.2em;
+      }
+      h2 {
+        font-size: 1.6em;
+      }
+      p {
+        font-size: 1.05em;
+      }
+      .profile-img {
+        width: 150px;
+        height: 150px;
+      }
+      .info, .quote {
+        padding: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- العنوان الرئيسي -->
+    <h1>مستر اسامة المحلاوى استاذ العلوم والكيمياء</h1>
+
+    <!-- الصورة الشخصية -->
+    <img src="55.png" alt="أسامة لبيب المحلاوي" class="profile-img" />
+
+    <!-- المقدمة -->
+    <p>
+      في مركز شبراخيت بمحافظة البحيرة، يُسطر شاب في العشرين من عمره قصة نجاح ملهمة. إنه <strong>أسامة لبيب المحلاوي</strong>، الذي حوّل شغفه بالكيمياء إلى أداة لتعليم الجيل الجديد، ليس فقط بالمعرفة، بل بالشغف والابتكار.
+    </p>
+
+    <!-- السيرة الذاتية -->
+    <h2>من أنا</h2>
+    <div class="info">
+      <p><strong>الاسم الكامل:</strong> أسامة لبيب المحلاوي</p>
+      <p><strong>العمر:</strong> 20 سنة</p>
+      <p><strong>العنوان:</strong> مركز شبراخيت، محافظة البحيرة، جمهورية مصر العربية</p>
+      <p><strong>المؤهل:</strong> بكالوريوس في العلوم والتربية، تخصص الكيمياء</p>
+      <p><strong>الوظيفة:</strong> مُدرِّس علوم وكيمياء</p>
+      <p><strong>البريد الإلكتروني:</strong> <a href="mailto:al192005al@gmail.com">al192005al@gmail.com</a></p>
+      <p><strong>رقم الهاتف:</strong> <a href="tel:01096755229">01096755229</a></p>
+    </div>
+
+    <!-- الوصف المهني -->
+    <h2>مهمتي التعليمية</h2>
+    <p>
+      أؤمن بأن التعليم لا يجب أن يكون مجرد حفظ للقواعد، بل تجربة حية. لذلك، أستخدم أساليب تفاعلية وتجارب عملية لتقريب العلوم من عقول الطلاب. من خلال شرحي البسيط والجذاب، أصبحت الكيمياء مادة ينتظرها الطلاب بحماس، لا بخوف.
+    </p>
+    <p>
+      أسعى دائمًا لتطوير نفسي، من خلال حضور ورش عمل، ومتابعة أحدث طرق التدريس الحديثة، لأنني أرى أن المُدرِّس الناجح هو من يتعلم أولًا.
+    </p>
+
+    <!-- رسالة شخصية -->
+    <h2>كلمتي إلى طلابي</h2>
+    <div class="quote">
+      "العلم ليس فقط في الكتب، بل في فضولك، في سؤالك، في تجربتك. أنا هنا لا لأعلمك ما هو الصحيح، بل لأعلمك كيف تفكر. الكيمياء ليست مواد وتفاعلات، بل هي لغة الكون التي نحاول فهمها معًا."
+    </div>
+
+    <!-- شهادة من طالب -->
+    <h2>ماذا يقولون عني؟</h2>
+    <p>
+      <strong>طالب سابق:</strong> "مستر اسامه فعلا كلمه تتقال فحقه انه هيغير مفهوم التدريس التقليدى "
+    </p>
+
+    <!-- معلومات الاتصال -->
+    <div class="contact">
+      <p>للتواصل مع الأستاذ أسامة لبيب:</p>
+      <p>📧 <a href="mailto:al192005al@gmail.com">al192005al@gmail.com</a></p>
+      <p>📞 <a href="tel:01096755229">01096755229</a></p>
+    </div>
+
+    <!-- الخاتمة -->
+    <p style="text-align: center; margin-top: 30px; font-weight: bold; color: #4fc3f7;">
+      أسامة لبيب ليس مجرد مُدرِّس، بل مُلهم. وقصته ما زالت في بدايتها. نتمنى له دومًا النجاح، وأن يستمر في زرع شرارة العلم في قلوب الطلاب.
+    </p>
+
+    <!-- الفوتر -->
+    <div class="footer">
+      &copy; 2025 - موقع شخصي لأستاذ العلوم والكيمياء <strong>أسامة لبيب</strong> | <a href="https://osama-profile.com">osama-profile.com</a> | تم التصميم بإتقان
+    </div>
+  </div>
+</body>
+</html>
